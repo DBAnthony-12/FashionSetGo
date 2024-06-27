@@ -1,212 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="stylesheet" href="CSS/FashionSetStyle.css"> -->
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="about.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <title>About Us - FashionSetGo Online Store</title>
-</head>
-<body>
-  <header class="header">
-    <div class="short-icons">
-        <div class="company-logo"><a href="index.html"><img src="1 (4).png" alt="Company Logo" class="logo" align="left"></a></div>
-        <a onclick="openCartModal()"><img src="icons/basket3.svg" alt="Cart" class="nav-icon1" align="right"></a>
-        <!-- <a href="Login.html"><img src="icons/heart.svg" alt="Wishlist" class="nav-icon2" align="right"></a> -->
-        <a href="Login.html"><img src="icons/person-lock.svg" alt="User Account" class="nav-icon3" align="right"></a>
-    </div>
-    
-    <div>
-        <div class="nav-links" align="center">
-            <ul>
-              <li><a href="index.html" class="nav-links">Home</a></li>
-                <div id="close" class="fa-solid fa-rectangle-xmark"></div>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Men</a>
-                    <div class="dropdown-content" id="menDropdown">
-                        <a href="MEN.html">All Men's Products</a>
-                        <a href="#">Shirts</a>
-                        <a href="#">Pants</a>
-                        <a href="#">Shoes</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Women</a>
-                    <div class="dropdown-content" id="womenDropdown">
-                        <a href="Women.html">All Women's Products</a>
-                        <a href="#">Dresses</a>
-                        <a href="#">Tops</a>
-                        <a href="#">Accessories</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Kids</a>
-                    <div class="dropdown-content" id="kidDropdown">
-                        <a href="Kids.html">All Kid's Products</a>
-                        <a href="#">Mini basball jackets</a>
-                        <a href="#">Tops</a>
-                        <a href="#">Accessories</a>
-                    </div>
-                </li>
-                <li><a href="UsAbout.html" class="nav-links">About</a></li>
-                <li><a href="Contact us.html" class="nav-links">Contact</a></li>
-            </ul>
+  </head>
+  <body>
+    <header class="header">
+      <div class="short-icons">
+        <div class="company-logo">
+          <a href="index.html"
+            ><img src="1 (4).png" alt="Company Logo" class="logo" align="left"
+          /></a>
         </div>
-    </div>
+        <a onclick="openCartModal()"
+          ><img
+            src="icons/basket3.svg"
+            alt="Cart"
+            class="nav-icon1"
+            align="right"
+        /></a>
+        <!-- <a href="Login.html"><img src="icons/heart.svg" alt="Wishlist" class="nav-icon2" align="right"></a> -->
+        <a href="Login.html"
+          ><img
+            src="icons/person-lock.svg"
+            alt="User Account"
+            class="nav-icon3"
+            align="right"
+        /></a>
+      </div>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
+      <div>
+        <div class="nav-links" align="center">
+          <ul>
+            <li><a href="index.html" class="nav-links">Home</a></li>
+            <div id="close" class="fa-solid fa-rectangle-xmark"></div>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Men</a>
+              <div class="dropdown-content" id="menDropdown">
+                <a href="MEN.html">All Men's Products</a>
+                <a href="#">Shirts</a>
+                <a href="#">Pants</a>
+                <a href="#">Shoes</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Women</a>
+              <div class="dropdown-content" id="womenDropdown">
+                <a href="Women.html">All Women's Products</a>
+                <a href="#">Dresses</a>
+                <a href="#">Tops</a>
+                <a href="#">Accessories</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Kids</a>
+              <div class="dropdown-content" id="kidDropdown">
+                <a href="Kids.html">All Kid's Products</a>
+                <a href="#">Mini basball jackets</a>
+                <a href="#">Tops</a>
+                <a href="#">Accessories</a>
+              </div>
+            </li>
+            <li><a href="UsAbout.html" class="nav-links">About</a></li>
+            <li><a href="Contact us.html" class="nav-links">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
         <div id="closeSidebar" class="fa-solid fa-rectangle-xmark"></div>
         <ul>
-            <li><a href="UsAbout.html">About</a></li>
-            <li><a href="Contact us.html">Contact</a></li>
-            <li><a href="Login.html">Login</a></li>
-            <li><a href="Register.html">Register</a></li>
-            <li> <a onclick="openCartModal()"><img src="icons/basket3.svg" alt="Cart" class="nav-icon1" align="right">Cart</a></li>
-            <li><a href="Login.html">Login</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="UsAbout.html">About</a></li>
+          <li><a href="Contact us.html">Contact</a></li>
+          <li>
+            <a onclick="openCartModal()"
+          ><img
+            src="icons/basket3.svg"
+            alt="Cart"
+            class="nav-icon1"
+            align="right"/>Cart</a>
+          </li>
+          </li>
         </ul>
-    </div>
-    <div id="menu" class="fa-solid fa-bars"></div>
-</header>
+      </div>
+      <div id="menu" class="fa-solid fa-bars"></div>
+    </header>
 
     <div class="about-section">
-       <h1>About Us</h1>
+      <h1>About Us</h1>
     </div>
 
-<div class="row">
-  <div class="column">
-    <div class="card">
-      
-      <div class="container">
-         <center>
-        <hr>
-        <h2>Our Story</h2>
-        <hr>
-        <p>Welcome to FashionSetGo, your ultimate destination for the latest trends in fashion for men, women, and kids! Founded in 2024, our store was born out of a passion for style and a desire to provide shoppers with a seamless online shopping experience.</p>
-        <p>At FashionSetGo, we believe that fashion is not just about clothing; it's a form of self-expression. Whether you're looking for casual everyday wear, chic office attire, or statement pieces for special occasions, we've got you covered with our carefully curated collection of clothing and accessories Driven by a commitment to inclusivity, FashionSetGo celebrates diversity in every stitch and seam. Our team tirelessly scouts for emerging designers and sustainable fashion brands, ensuring a diverse range of styles and sizes to cater to every body type and personal taste.</p>
-    </center>
-      </div>
-    </div>
-  </div>
-
-  <div class="column">
-    <div class="card">
-      
-      <div class="container">
-        <center>
-        <hr>
-        <h2>Our Mission</h2>
-        <hr>
-        <p>Our mission is simple: to empower individuals to look and feel their best by offering a diverse range of high-quality, on-trend fashion at affordable prices. We strive to make fashion accessible to everyone, regardless of size, style preference, or budget.</p>
-        <p>With a focus on customer satisfaction and continuous improvement, we are committed to providing exceptional service, ensuring a seamless shopping experience from start to finish In line with our dedication to sustainability, FashionSetGo is actively working towards reducing our environmental footprint. We partner with eco-conscious suppliers and implement eco-friendly practices throughout our operations, from sourcing materials to packaging and shippingwe are dedicated to fostering a vibrant online community where fashion enthusiasts can connect .</p>
-    </center>
-      </div>
-    </div>
-  </div>
-
-  <div class="column">
-    <div class="card">
-     
-      <div class="container">
-        <center>
-        <hr>
-        <h2>Our Values</h2>
-        <hr>
-        <p> At <b>FashionSetGo</b>, we are guided by a set of core values  that define who we are and how we operate</p>
-        <div align="left">
-            <strong>Quality:</strong> We are dedicated to offering only the highest quality products that meet our strict standards of craftsmanship and durability. <br>
-            <strong>Style:</strong> We stay ahead of the curve by staying on top of the latest fashion trends and curating our collection to reflect the hottest styles of the season. <br>
-            <strong>Accessibility:</strong> We believe that everyone deserves to have access to stylish and affordable fashion, which is why we offer a wide range of sizes and price points.<br>
-            <strong>Integrity:</strong> We conduct business with honesty, transparency, and integrity, building trust with our customers through open communication and ethical practices.
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <div class="container">
+            <center>
+              <hr />
+              <h2>Our Story</h2>
+              <hr />
+              <p>
+                Welcome to FashionSetGo, your ultimate destination for the
+                latest trends in fashion for men, women, and kids! Founded in
+                2024, our store was born out of a passion for style and a desire
+                to provide shoppers with a seamless online shopping experience.
+              </p>
+              <p>
+                At FashionSetGo, we believe that fashion is not just about
+                clothing; it's a form of self-expression. Whether you're looking
+                for casual everyday wear, chic office attire, or statement
+                pieces for special occasions, we've got you covered with our
+                carefully curated collection of clothing and accessories Driven
+                by a commitment to inclusivity, FashionSetGo celebrates
+                diversity in every stitch and seam. Our team tirelessly scouts
+                for emerging designers and sustainable fashion brands, ensuring
+                a diverse range of styles and sizes to cater to every body type
+                and personal taste.
+              </p>
+            </center>
+          </div>
         </div>
-    </center>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="container">
+            <center>
+              <hr />
+              <h2>Our Mission</h2>
+              <hr />
+              <p>
+                Our mission is simple: to empower individuals to look and feel
+                their best by offering a diverse range of high-quality, on-trend
+                fashion at affordable prices. We strive to make fashion
+                accessible to everyone, regardless of size, style preference, or
+                budget.
+              </p>
+              <p>
+                With a focus on customer satisfaction and continuous
+                improvement, we are committed to providing exceptional service,
+                ensuring a seamless shopping experience from start to finish In
+                line with our dedication to sustainability, FashionSetGo is
+                actively working towards reducing our environmental footprint.
+                We partner with eco-conscious suppliers and implement
+                eco-friendly practices throughout our operations, from sourcing
+                materials to packaging and shippingwe are dedicated to fostering
+                a vibrant online community where fashion enthusiasts can connect
+                .
+              </p>
+            </center>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="container">
+            <center>
+              <hr />
+              <h2>Our Values</h2>
+              <hr />
+              <p>
+                At <b>FashionSetGo</b>, we are guided by a set of core values
+                that define who we are and how we operate
+              </p>
+              <div align="left">
+                <strong>Quality:</strong> We are dedicated to offering only the
+                highest quality products that meet our strict standards of
+                craftsmanship and durability. <br />
+                <strong>Style:</strong> We stay ahead of the curve by staying on
+                top of the latest fashion trends and curating our collection to
+                reflect the hottest styles of the season. <br />
+                <strong>Accessibility:</strong> We believe that everyone
+                deserves to have access to stylish and affordable fashion, which
+                is why we offer a wide range of sizes and price points.<br />
+                <strong>Integrity:</strong> We conduct business with honesty,
+                transparency, and integrity, building trust with our customers
+                through open communication and ethical practices.
+              </div>
+            </center>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-<hr>
-<h2>Our Team</h2>
-<hr>
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="images/team/me.jpg">
-      <img src="images/team/me.jpg" alt="Cinque Terre">
-    </a>
-    <div class="desc">Dilshaad Begum Anthony</div>
-  </div>
-</div>
-
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="images/team/Image.jpg">
-      <img src="images/team/Image.jpg" alt="Forest">
-    </a>
-    <div class="desc">Xola Ngece</div>
-  </div>
-</div>
-
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="images/team/Image_4.jpg">
-      <img src="images/team/Image_4.jpg" alt="Northern Lights">
-    </a>
-    <div class="desc">Marques Arendse</div>
-  </div>
-</div>
-
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="images/team/Zamo 5.jpg">
-      <img src="images/team/Zamo 5.jpg" alt="Mountains">
-    </a>
-    <div class="desc">Zamokuhle Ngubane</div>
-  </div>
-</div>
-
-
-
-<div class="clearfix"></div>
-
-<br><br>
-<footer class="footer">
-  <div class="container">
-      <div class="row">
-          <div class="footer-col">
-              <h4>Customer Service</h4>
-              <ul>
-                  <li><a href="#">Help & FAQ's</a></li>
-                  <li><a href="#">Delivery information</a></li>
-                  <li><a href="#">Returns Information</a></li>
-              </ul>
-          </div>
-          <div class="footer-col">
-              <h4>FashionSetGo the Brand</h4>
-              <ul>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Contact Us</a></li>
-              </ul>
-          </div>
-          <div class="footer-col">
-              <h4>Information</h4>
-              <ul>
-                  <li><a href="#">Terms and Conditions</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-              </ul>
-          </div>
-          <div class="footer-col">
-              <h4>Socials</h4>
-              <div class="social-links">
-                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                  <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              </div>
-          </div>
+    <hr />
+    <h2>Our Team</h2>
+    <hr />
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="images/team/me.jpg">
+          <img src="images/team/me.jpg" alt="Cinque Terre" />
+        </a>
+        <div class="desc">Dilshaad Begum Anthony</div>
       </div>
-  </div>
-</footer>
-<script src="script.js"></script>
-</body>
- 
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="images/team/Image.jpg">
+          <img src="images/team/Image.jpg" alt="Forest" />
+        </a>
+        <div class="desc">Xola Ngece</div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="images/team/Image_4.jpg">
+          <img src="images/team/Image_4.jpg" alt="Northern Lights" />
+        </a>
+        <div class="desc">Marques Arendse</div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="images/team/Zamo 5.jpg">
+          <img src="images/team/Zamo 5.jpg" alt="Mountains" />
+        </a>
+        <div class="desc">Zamokuhle Ngubane</div>
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <br /><br />
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Customer Service</h4>
+            <ul>
+              <li><a href="#">Help & FAQ's</a></li>
+              <li><a href="#">Delivery information</a></li>
+              <li><a href="#">Returns Information</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>FashionSetGo the Brand</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Information</h4>
+            <ul>
+              <li><a href="#">Terms and Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Socials</h4>
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="Aboutscript.js"></script>
+  </body>
 </html>
- 
