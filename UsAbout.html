@@ -3,28 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/FashionSetStyle.css">
+    <!-- <link rel="stylesheet" href="CSS/FashionSetStyle.css"> -->
+    <link rel="stylesheet" href="about.css">
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
     <title>About Us - FashionSetGo Online Store</title>
 </head>
 <body>
-    <header>
-         <nav>
-            <a href="index.html"><img src="1.png" alt="Company Logo" class="logo" align="left"></a>
-            <label for="menu-toggle" class="menu-icon">&#9776;</label>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Contact us.html">Contact</a></li>
-                <li><a href="Login.html">Login</a></li>
-                <li><a href="Register.html">Register</a></li>
+  <header class="header">
+    <div class="short-icons">
+        <div class="company-logo"><a href="index.html"><img src="1 (4).png" alt="Company Logo" class="logo" align="left"></a></div>
+        <a onclick="openCartModal()"><img src="icons/basket3.svg" alt="Cart" class="nav-icon1" align="right"></a>
+        <!-- <a href="Login.html"><img src="icons/heart.svg" alt="Wishlist" class="nav-icon2" align="right"></a> -->
+        <a href="Login.html"><img src="icons/person-lock.svg" alt="User Account" class="nav-icon3" align="right"></a>
+    </div>
+    
+    <div>
+        <div class="nav-links" align="center">
+            <ul>
+              <li><a href="index.html" class="nav-links">Home</a></li>
+                <div id="close" class="fa-solid fa-rectangle-xmark"></div>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Men</a>
+                    <div class="dropdown-content" id="menDropdown">
+                        <a href="MEN.html">All Men's Products</a>
+                        <a href="#">Shirts</a>
+                        <a href="#">Pants</a>
+                        <a href="#">Shoes</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Women</a>
+                    <div class="dropdown-content" id="womenDropdown">
+                        <a href="Women.html">All Women's Products</a>
+                        <a href="#">Dresses</a>
+                        <a href="#">Tops</a>
+                        <a href="#">Accessories</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Kids</a>
+                    <div class="dropdown-content" id="kidDropdown">
+                        <a href="Kids.html">All Kid's Products</a>
+                        <a href="#">Mini basball jackets</a>
+                        <a href="#">Tops</a>
+                        <a href="#">Accessories</a>
+                    </div>
+                </li>
+                <li><a href="UsAbout.html" class="nav-links">About</a></li>
+                <li><a href="Contact us.html" class="nav-links">Contact</a></li>
             </ul>
-        </nav>
-        
-       </header>
-    <div class="about-section">
-  <h1>About Us</h1>
+        </div>
+    </div>
 
-</div>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div id="closeSidebar" class="fa-solid fa-rectangle-xmark"></div>
+        <ul>
+            <li><a href="UsAbout.html">About</a></li>
+            <li><a href="Contact us.html">Contact</a></li>
+            <li><a href="Login.html">Login</a></li>
+            <li><a href="Register.html">Register</a></li>
+            <li> <a onclick="openCartModal()"><img src="icons/basket3.svg" alt="Cart" class="nav-icon1" align="right">Cart</a></li>
+            <li><a href="Login.html">Login</a></li>
+        </ul>
+    </div>
+    <div id="menu" class="fa-solid fa-bars"></div>
+</header>
+
+    <div class="about-section">
+       <h1>About Us</h1>
+    </div>
 
 <div class="row">
   <div class="column">
@@ -157,6 +205,7 @@
       </div>
   </div>
 </footer>
+<script src="script.js"></script>
 </body>
  
 </html>

@@ -28,9 +28,10 @@ nav {
 }
 
 .nav-links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li {
@@ -54,40 +55,57 @@ nav {
 }
 
 .sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0; /* Adjusted from left: 0 to right: 0 */
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    display: flex;
+  display: none;
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 150px; 
+  height: 100%;
+  background-color: #111;
+  z-index: 999;
+  padding-top: 30px;
+  overflow-x: hidden;
+  transition: 0.5s;
 }
 
 .sidebar ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+}
+.sidebar ul li {
+  padding: 8px;
+  text-align: center;
 }
 
-.sidebar li {
-    padding: 15px;
-    text-align: center;
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
 }
 
-.sidebar a {
-    text-decoration: none;
-    font-size: 20px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+.fa-rectangle-xmark, #closeSidebar {
+  display: block;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  text-align: right;
+  padding-right: 20px;
 }
 
-.sidebar a:hover {
+/* .sidebar a:hover {
     color: #f1f1f1;
+} */
+
+#menu {
+  display: block;
+  position: fixed;
+  top: 15px;
+    right: 15px;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
 }
 
 #closeSidebar {
@@ -103,10 +121,6 @@ nav {
 
 #closeSidebar:hover {
     color: #f1f1f1;
-}
-
-#menu {
-    display: none; /* Hide the bars icon initially */
 }
 
 .logo {
@@ -190,6 +204,66 @@ article {
 
 .card p {
     margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .nav-icon1, .nav-icon2, .nav-icon3 {
+      display: none;
+  }
+  .nav-links {
+      display: none;
+  }
+  #menu {
+      display: block;
+      cursor: pointer;
+      font-size: 24px;
+      color: black;
+  }
+  .sidebar {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 0px;
+      background-color: #111;
+      z-index: 1000;
+      padding-top: 60px;
+      transition: width 0.5s; 
+  }
+
+  .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+  }
+  .sidebar ul li {
+      padding: 8px;
+      text-align: center;
+  }
+  .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      font-size: 18px;
+  }
+  .fa-rectangle-xmark, #closeSidebar {
+      display: block;
+      font-size: 24px;
+      cursor: pointer;
+      color: white;
+      text-align: right;
+      padding-right: 20px;
+  }
+}
+
+/* Default styles for larger screens */
+@media (min-width: 769px) {
+  #menu {
+      display: none;
+  }
+  .sidebar {
+      display: none;
+  }
 }
 
 /* Footer style starts */
@@ -520,20 +594,13 @@ button:hover, a:hover {
     overflow: auto;
 } 
 
-.nav-icon1 {
-    height: 1em;
-    margin: 2em 1em 0em 0em;
-}
-  
-.nav-icon2 {
-    height: 1em;
-    margin: 2em 0.5em 0em 0em;
+.nav-icon1, .nav-icon2, .nav-icon3 {
+  /* display: inline-block; */
+  width: 24px;  /* Default size */
+  height: 24px;
+  margin: 15px;
 }
 
-.nav-icon3 {
-    height: 1em;
-    margin: 2em 0.5em 0em 0em;
-}
 
 
 /* Style the dropdown button */
