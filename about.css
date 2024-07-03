@@ -237,6 +237,7 @@ hr {
   margin-bottom: 20px;
 }
 .product {
+  position: relative;
   display: flex;
   flex-direction: column; /* Stack items vertically */
   align-items: center; /* Center align items */
@@ -252,9 +253,54 @@ hr {
   width: 200px; /* Adjust image width as needed */
   height: auto; /* Maintain aspect ratio */
   margin-bottom: 10px; /* Add space below image */
+  display: block;
 }
-.product h3 {
-  margin-bottom: 5px; /* Adjust margin for product name */
+.product .info {
+  position: absolute; /* Position the info container absolutely within the product container */
+  bottom: 0; /* Position it at the bottom */
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white; /* White text */
+  text-align: center; /* Center align text */
+  padding: 10px 0; /* Add padding */
+  opacity: 0; /* Hide the info initially */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.product:hover .info {
+  opacity: 1; /* Show the info on hover */
+}
+
+.product .button-link {
+  display: inline-block; /* Ensure the button behaves as an inline-block */
+  margin-top: 10px; /* Add space between the heading and the button */
+  padding: 10px 20px; /* Add padding to the button */
+  background-color: orange; /* Button background color */
+  color: white; /* Button text color */
+  text-decoration: none; /* Remove underline from link */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* .product .button-link:hover {
+  background-color: orange /* Darken button color on hover 
+} */
+
+.product:hover img {
+  transform: scale(1.1); /* Scale image on hover */
+}
+
+.product:hover .hidden-info {
+  display: block; /* Show <p> tags on hover */
+  position: absolute;
+  top: 50%; /* Adjust as necessary for your layout */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the text */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .clearfix::after {
