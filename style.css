@@ -79,7 +79,7 @@ nav {
 .sidebar ul li a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
   display: block;
 }
 
@@ -94,21 +94,21 @@ nav {
 }
 
 #menu {
-  display: block;
+  display: none;
   position: fixed;
   top: 15px;
   right: 15px;
   font-size: 28px;
-  color: white;
+  color: black;
   cursor: pointer;
   padding: 10px;
 }
 
 #closeSidebar {
   display: none;
-  position: fixed; /* Use fixed position for consistent placement */
+  position: fixed;
   top: 10px;
-  right: 10px; /* Adjust the right property for positioning */
+  right: 10px;
   font-size: 30px;
   color: #818181;
   cursor: pointer;
@@ -117,6 +117,9 @@ nav {
 
 #closeSidebar:hover {
   color: #f1f1f1;
+}
+.sidebar ul li a:hover{
+  color: #969292;
 }
 
 .logo {
@@ -129,8 +132,10 @@ h2 {
   text-align: center;
 }
 hr {
-  border: 1px solid #333;
-  margin: 20px 0;
+  border: 2px solid #DA5726;
+  margin: 20px auto;
+  width: 95%;
+  height: 2px;
 }
 
 img {
@@ -230,6 +235,12 @@ article {
     padding-top: 60px;
     transition: width 0.5s;
   }
+  .sidebar-link {
+    font-size: 16px; /* Decrease font size for smaller screens */
+}
+.dropdown-content {
+  width: 180px; /* Adjust dropdown width for smaller screens */
+}
 
   .sidebar ul {
     list-style-type: none;
@@ -249,7 +260,7 @@ article {
   #closeSidebar {
     display: block;
     position: relative;
-    font-size: 24px;
+    font-size: 30px;
     cursor: pointer;
     color: white;
     text-align: right;
@@ -259,11 +270,6 @@ article {
 
 /* Footer style starts */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 .container {
   max-width: 1170px;
   margin: auto;
@@ -336,7 +342,7 @@ ul {
 }
 
 /*responsive*/
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .footer-col {
     width: 50%;
     margin-bottom: 30px;
