@@ -591,11 +591,8 @@ h3 {
     /* visibility: hidden; */
   }
   .text {
-    font-size: 30px;
+    font-size: 20px;
     top: 30px;
-  }
-  .text span {
-    font-size: 25px;
   }
 
   .dot {
@@ -632,11 +629,8 @@ h3 {
 /*media queries for slideshow container*/
 @media (max-width: 480px) {
   .text {
-    font-size: 50px;
-    top: 20px;
-  }
-  .text span {
     font-size: 25px;
+    top: 20px;
   }
 
   .dot {
