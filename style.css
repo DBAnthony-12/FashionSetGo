@@ -228,7 +228,8 @@ h2 {
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
+  color: white;
+  /* color: orange; */
   font-size: 35px;
   padding: 8px 12px;
   position: absolute;
@@ -629,7 +630,7 @@ h3 {
 /*media queries for slideshow container*/
 @media (max-width: 480px) {
   .text {
-    font-size: 25px;
+    font-size: 20px;
     top: 20px;
   }
 
@@ -710,5 +711,28 @@ h3 {
   }
   .footer-col .social-links a {
     margin: 0 5px 10px 5px;
+  }
+}
+/* For screens smaller than 768px (typical mobile devices) */
+@media (max-width: 767px) {
+  #getStarted {
+    font-size: 14px; /* Adjust font size */
+    padding: 8px 16px; /* Adjust padding */
+  }
+}
+
+/* For screens between 768px and 1023px (tablets and small laptops) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #getStarted {
+    font-size: 18px; /* Adjust font size */
+    padding: 12px 24px; /* Adjust padding */
+  }
+}
+
+/* For screens 1024px and larger (typical desktop screens) */
+@media (min-width: 1024px) {
+  #getStarted {
+    font-size: 20px; /* Adjust font size */
+    padding: 14px 28px; /* Adjust padding */
   }
 }
