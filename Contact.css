@@ -1,8 +1,8 @@
 /* Base Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -11,499 +11,540 @@ body {
   padding: 0 15px; /* Add margin spacing around the content */
 }
 .header {
-    padding: 20px 0;
+  padding: 20px 0;
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .company-logo {
-    margin-left: 50px;
+  margin-left: 50px;
 }
 
 .company-logo a {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
-
-nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0 20px;
-}
+/*Nav links*/
 
 .nav-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 10px;
-    font-size: 25px;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .nav-links ul {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Hide close button */
-  .nav-links #close {
-    display: none;
-  }
-  
-  /* Dropdown menu */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-    margin: 0 5px;
-    font-weight: bold;
-    font-size: 25px;
-  }
-  
-  .dropbtn {
-    color: black;
-    border: none;
-    padding: 10px 10px;
-    background: none;
-    font-size: 25px;
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 25px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
 
+.nav-links ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide close button */
+.nav-links #close {
+  display: none;
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.dropbtn {
+  color: black;
+  border: none;
+  padding: 10px 10px;
+  background: none;
+  font-size: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 /* Sidebar */
 .sidebar {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 150px;
-    height: 100%;
-    background-color: #111;
-    z-index: 999;
-    padding-top: 30px;
-    transition: 0.5s;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 100%;
+  background-color: #111;
+  z-index: 999;
+  padding-top: 30px;
+  transition: 0.5s;
+  overflow-x: hidden;
 }
 
 .sidebar ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .sidebar ul li {
-    padding: 8px;
-    text-align: center;
+  padding: 8px;
+  text-align: center;
 }
 
 .sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
 }
 
 .fa-rectangle-xmark,
 #closeSidebar {
-    display: block;
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
-    text-align: right;
-    padding-right: 20px;
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  text-align: right;
+  padding-right: 20px;
 }
 
 #menu {
-    display: block;
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    font-size: 28px;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
+  display: none;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
 }
 
-#closeSidebar {
-    display: none;
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    font-size: 30px;
-    color: #818181;
-    cursor: pointer;
-    transition: 0.3s;
+/* #closeSidebar {
+  display: none;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: #818181;
+  cursor: pointer;
+  transition: 0.3s;
+} */
+
+/* Show the sidebar and close button when the sidebar is active */
+.sidebar.active {
+  width: 200px;
+  display: block;
+}
+
+.sidebar.active #closeSidebar {
+  display: block;
 }
 
 #closeSidebar:hover {
-    color: #f1f1f1;
+  color: #f1f1f1;
 }
-.sidebar ul li a:hover{
-    color: #969292;
+.sidebar ul li a:hover {
+  color: #969292;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 hr {
-    border: 1px solid #333;
-    margin: 20px 0;
+  border: 1px solid #333;
+  margin: 20px 0;
+}
+
+/*Subscription section*/
+.subscribe-section {
+  padding: 50px 0;
+  /* background-color: #d18888; /* Add a background color if needed */
 }
 
 .subscribe {
-    text-align: center;
-    padding: 50px 0;
+  text-align: center;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
+.sub-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
+
+.section-heading h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.section-heading span {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/*form section*/
 
 .form-container {
-    width: 300px;
-    margin: 0 auto;
-    background-color: rgb(167, 167, 167);
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: rgb(206, 201, 201);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-container form {
-    text-align: center;
+  text-align: center;
 }
 
 .form label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
 .form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
 }
 
 .form button {
-    background-color: #DA5726;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
+  background-color: #da5726;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  width: 80%;
 }
 
 .form button:hover {
-    background-color: #DA5726;
+  background-color: #bf4e21;
 }
 
+/*contact list of place*/
 .contact-list {
-    list-style: none;
-    padding: 10px;
-    font-size: 18px;
+  list-style: none;
+  padding: 0;
+  font-size: 18px;
+  text-align: center;
 }
 
 .contact-list li {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-.contact-list strong {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+.contact-list label {
+  font-weight: bold;
 }
+
+.contact-list span {
+  display: block;
+}
+
+/*iframe map*/
 .responsive-map {
-    width: 100%;
-    height: 300px; /* Default height for larger screens */
-    border: 0;
+  width: 50%;
+  height: 300px;
+  border: 0;
+  margin-top: 20px;
 }
 
-.contact-column {
-    margin-top: 20px;
+/*Footer*/
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 15px;
 }
 
-footer {
-    background-color: #000000;
-    padding: 50px 0;
-    width: 100%;
-    box-sizing: border-box;
-    margin-top: 20px;
+.footer {
+  background-color: #000000;
+  padding: 50px 0;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 20px;
+  text-align: left;
 }
 
-.footer .container {
-    max-width: 1200px;
-    margin: 0 auto;
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .footer-col {
-    width: 50%;
-    padding: 0 15px;
-    float: left;
-    box-sizing: border-box;
+  width: 25%;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 
 .footer-col h4 {
-    font-size: 16px;
-    color: #ffffff;
-    text-transform: capitalize;
-    margin-bottom: 25px;
-    font-weight: 500;
-    position: relative;
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
 }
 
 .footer-col h4::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    background-color: #DA5726;
-    height: 2px;
-    box-sizing: border-box;
-    width: 50px;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #da5726;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-col ul li:not(:last-child) {
-    margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .footer-col ul li a {
-    font-size: 14px;
-    text-transform: capitalize;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 300;
-    display: block;
-    transition: all 0.3s ease;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  display: block;
+  transition: all 0.3s ease;
 }
 
 .footer-col ul li a:hover {
-    color: #DA5726;
+  color: #da5726;
+  padding-left: 8px;
 }
 
 .footer-col .social-links a {
-    display: inline-block;
-    height: 32px;
-    width: 32px;
-    background-color: rgba(255, 255, 255, 0.2);
-    margin: 0 8px 8px 0;
-    text-align: center;
-    line-height: 32px;
-    border-radius: 50%;
-    color: #ffffff;
-    transition: all 0.5s ease;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
 }
 
 .footer-col .social-links a:hover {
-    color: #24262b;
-    background-color: #DA5726;
-}
-
-.footer .row {
-    display: flex;
-    flex-wrap: wrap;
+  color: #24262b;
+  background-color: #da5726;
 }
 
 /* Media Queries */
 
 /* Tablets and below */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
+  .nav-links li {
+    display: block;
+    margin: 10px 0;
+  }
 
-    .nav-links li {
-        display: block;
-        margin: 10px 0;
-    }
+  .nav-icon1 {
+    display: none;
+  }
+  .container {
+    padding: 0 20px;
+  }
 
-    .nav-icon1{
-        display: none;
-    }
-    .container {
-        padding: 0 20px;
-    }
+  .form-container {
+    width: 80%;
+  }
 
-    .form-container {
-        width: 80%;
-    }
+  .form-container form {
+    text-align: left;
+  }
 
-    .form-container form {
-        text-align: left;
-    }
+  .form input,
+  .form button {
+    width: 100%;
+  }
+  .footer-col {
+    width: 100%; /* Two columns per row */
+    margin-bottom: 30px; /* Add margin for spacing */
+  }
 
-    .form input,
-    .form button {
-        width: 100%;
-    }
-    .footer-col {
-        width: 100%; /* Two columns per row */
-        margin-bottom: 15px; /* Add margin for spacing */
-      }
-      footer .row {
-        flex-direction: column;
-    }
-    
-    #menu {
-        display: block;
-        cursor: pointer;
-        font-size: 24px;
-        color: black;
-      }
-      .sidebar {
-        display: inline-block;
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: 0px;
-        background-color: #111;
-        z-index: 1000;
-        padding-top: 60px;
-        transition: width 0.5s;
-      }
-    
-      .sidebar ul {
-        list-style-type: none;
-        padding: 0;
-      }
-    
-      .sidebar ul li {
-        padding: 8px;
-        text-align: center;
-      }
-    
-      .sidebar ul li a {
-        color: white;
-        text-decoration: none;
-        display: block;
-        font-size: 18px;
-      }
-    
-      .fa-rectangle-xmark,
-      #closeSidebar {
-        display: block;
-        position: relative;
-        font-size: 30px;
-        cursor: pointer;
-        color: white;
-        text-align: right;
-        padding-right: 20px;
-    }
-    .responsive-map {
-        height: 200px; /* Smaller height for smaller tablets */
-        width: 70%;
-    }
+  #menu {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    color: black;
+  }
+  .sidebar {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0px;
+    background-color: #111;
+    z-index: 1000;
+    padding-top: 60px;
+    transition: width 0.5s;
+  }
+
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .sidebar ul li {
+    padding: 8px;
+    text-align: center;
+  }
+
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+  }
+
+  .fa-rectangle-xmark,
+  #closeSidebar {
+    display: block;
+    position: relative;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    text-align: right;
+    padding-right: 20px;
+  }
+  .responsive-map {
+    height: 200px; /* Smaller height for smaller tablets */
+    width: 70%;
+  }
 }
 
 /* Mobile phones */
 @media (max-width: 480px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .nav-links {
-        width: 100%;
-        text-align: center;
-    }
+  .nav-links {
+    width: 100%;
+    text-align: center;
+  }
 
-    .nav-links li {
-        margin: 10px 0;
-    }
+  .nav-links li {
+    margin: 10px 0;
+  }
 
-    .form-container {
-        width: 90%;
-        padding: 15px;
-    }
+  .form-container {
+    width: 90%;
+    padding: 15px;
+  }
 
-    .form-container form {
-        text-align: left;
-    }
+  .form-container form {
+    text-align: left;
+  }
 
-    .form input,
-    .form button {
-        width: 100%;
-        padding: 10px;
-    }
+  .form input,
+  .form button {
+    width: 100%;
+    padding: 10px;
+  }
 
-    .form label {
-        margin-bottom: 10px;
-    }
+  .form label {
+    margin-bottom: 10px;
+  }
 
-    .form input {
-        margin-bottom: 10px;
-    }
+  .form input {
+    margin-bottom: 10px;
+  }
 
-    .form button {
-        padding: 10px 15px;
-    }
-    .footer{
-        font-size: 20px;
-    }
+  .form button {
+    padding: 10px 15px;
+  }
 
-    .footer-col {
-        width: 50%; /* Two columns per row */
-        margin-bottom: 15px;
-    }
+  .subscribe {
+    padding: 30px 10px;
+  }
 
-    footer .row {
-        flex-direction: column;
-    }
+  .container {
+    padding: 0 10px;
+  }
+  .responsive-map {
+    height: 150px; /* Smallest height for mobile phones */
+    width: 90%;
+  }
+}
 
-    .subscribe {
-        padding: 30px 10px;
-    }
-
-    .container {
-        padding: 0 10px;
-    }
-    .responsive-map {
-        height: 150px; /* Smallest height for mobile phones */
-        width: 90%;
-    }
+/*More footer media queries*/
+@media (max-width: 992px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 576px) {
+  .footer {
+    text-align: center;
+  }
+  .footer-col h4::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .footer-col ul li a:hover {
+    padding-left: 0;
+  }
+  .footer-col .social-links a {
+    margin: 0 5px 10px 5px;
+  }
 }

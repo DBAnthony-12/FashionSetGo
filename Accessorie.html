@@ -1,63 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/Accessories.css">
-    <link rel="stylesheet" href="CSS/FashionSetStyle.css">
-    <title>ACCESSORIES Page</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="index.html"><img src="1.png" alt="Company Logo" class="logo"></a>
-            <label for="menu-toggle" class="menu-icon">&#9776;</label>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="UsAbout.html">About</a></li>
-                <li><a href="Contact us.html">Contact</a></li>
-                <li><a onclick="openCartModal()">Cart</a></li>
-                <li><a href="Login.html">Login</a></li>
-            </ul>
-        </nav>
-        <hr>
-        <center><h1>ACCESSORIES</h1></center>
-        <hr>
-    </header>
-    <main>
-        <pre>
-                                             <img src="images/explore-image-01.jpg" alt="">                  <img src="images/explore-image-02.jpg" alt="">
-                                             <b>Bruling Black Set</b>                                      <b>Retro Corduroy Hand Bag</b>
-                                             799.00 ZAR                                             549.00 ZAR
-                                             <button onclick="addToCart(14)" class="butt">ADD TO CART</button>                                  <button onclick="addToCart(15)" class="butt">ADD TO CART</button>
-
-
-
-                            <img src="images/instagram-02.jpg" alt="">                      <img src="images/instagram-04.jpg" alt="">                  <img src="images/instagram-06.jpg" alt="">
-                            <b>Brown Clutch Bag Set</b>                              <b>Cosmetic Pouch Set</b>                            <b>Elegant Metal Edge Bag</b>
-                            R379.00 ZAR                                       R430.00                                       R499.00
-                            <button onclick="addToCart(16)" class="butt">ADD TO CART</button>                             <button onclick="addToCart(17)" class="butt">ADD TO CART</button>                         <button onclick="addToCart(18)" class="butt">ADD TO CART</button>
-
-
-        </pre>
-         <!-- The cart modal -->
-         <div id="cartModal" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-                <span class="close" onclick="closeCartModal()">&times;</span>
-                <h2>Cart Contents</h2>
-                <div id="cartContents"></div>
-                <button onclick="clearCart()" class="butt">Clear Cart</button>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/Accessories.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>Women Accessories Page</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="short-icons">
+        <div class="company-logo">
+          <a href="index.html"
+            ><img src="1 (4).png" alt="Company Logo" class="logo" align="left"
+          /></a>
         </div>
-    </main>
-    <footer>
-        <br>
-        <br>
-        <center>
-            <p>&copy; <strong>2024 FashionSetGo Online Store. All rights reserved.</strong></p>
-        </center>
+        <a href="Login.html"
+          ><img
+            src="icons/person-lock.svg"
+            alt="User Account"
+            class="nav-icon3"
+            align="right"
+        /></a>
+
+        <!--<a href="Login.html"
+              ><img
+                src="icons/heart.svg"
+                alt="Wishlist"
+                class="nav-icon2"
+                align="right"
+            /></a> -->
+
+        <a onclick="openCartModal()"
+          ><img
+            src="icons/basket3.svg"
+            alt="Cart"
+            class="nav-icon1"
+            align="right"
+        /></a>
+      </div>
+
+      <div>
+        <div class="nav-links" align="center">
+          <ul>
+            <li><a href="index.html" class="nav-links">Home</a></li>
+            <div id="close" class="fa-solid fa-rectangle-xmark"></div>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Men</a>
+              <div class="dropdown-content" id="menDropdown">
+                <a href="MEN.html">All Men's Products</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Women</a>
+              <div class="dropdown-content" id="womenDropdown">
+                <a href="Women.html">All Women's Products</a>
+                <a href="Accessorie.html">Accessories</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Kids</a>
+              <div class="dropdown-content" id="kidDropdown">
+                <a href="Kids.html">All Kid's Products</a>
+              </div>
+            </li>
+            <li><a href="UsAbout.html" class="nav-links">About</a></li>
+            <li><a href="Contact us.html" class="nav-links">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div id="closeSidebar" class="fa-solid fa-rectangle-xmark"></div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="UsAbout.html">About</a></li>
+          <li><a href="Contact us.html">Contact</a></li>
+          <li><a href="MEN.html">Men</a></li>
+          <li><a href="Women.html" class="sidebar-link">Women</a></li>
+          <li>
+            <a href="Accessorie.html" class="sidebar-link">Accessories</a>
+          </li>
+          <li><a href="Kids.html" class="sidebar-link">Kids</a></li>
+        </ul>
+      </div>
+      <div id="menu" class="fa-solid fa-bars"></div>
+    </header>
+
+    <hr />
+    <br />
+    <h1>Women Accessories Fashion</h1>
+    <br />
+
+    <div class="section-wrapper">
+      <section>
+        <div class="product">
+          <img src="images/explore-image-01.jpg" alt="Bruling Black Set" />
+          <h3>Bruling Black Set</h3>
+          <p>799.00 ZAR</p>
+          <button onclick="addToCart(14)" class="butt">ADD TO CART</button>
+        </div>
+        <div class="product">
+          <img
+            src="images/explore-image-02.jpg"
+            alt="Retro Corduroy Hand Bag"
+          />
+          <h3>Retro Corduroy Hand Bag</h3>
+          <p>549.00 ZAR</p>
+          <button onclick="addToCart(15)" class="butt">ADD TO CART</button>
+        </div>
+        <div class="product">
+          <img src="images/instagram-03.jpg" alt="Brown Clutch Bag Set" />
+          <h3>Brown Clutch Bag Set</h3>
+          <p>379.00 ZAR</p>
+          <button onclick="addToCart(16)" class="butt">ADD TO CART</button>
+        </div>
+        <div class="product">
+          <img src="images/instagram-04.jpg" alt="Cosmetic Pouch Set" />
+          <h3>Cosmetic Pouch Set</h3>
+          <p>430.00 ZAR</p>
+          <button onclick="addToCart(17)" class="butt">ADD TO CART</button>
+        </div>
+        <div class="product">
+          <img src="images/instagram-06.jpg" alt="Elegant Metal Edge Bag" />
+          <h3>Elegant Metal Edge Bag</h3>
+          <p>499.00 ZAR</p>
+          <button onclick="addToCart(18)" class="butt">ADD TO CART</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- The cart modal -->
+    <div id="cartModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeCartModal()">&times;</span>
+        <h2>Cart Contents</h2>
+        <div id="cartContents"></div>
+        <button onclick="clearCart()" class="butt">Clear Cart</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-row">
+          <div class="footer-col">
+            <h4>Customer Service</h4>
+            <ul>
+              <li><a href="#">Help & FAQ's</a></li>
+              <li><a href="#">Delivery information</a></li>
+              <li><a href="#">Returns Information</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>FashionSetGo the Brand</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="UsAbout.html">About Us</a></li>
+              <li><a href="MEN.html">Men</a></li>
+              <li><a href="Women.html">Women</a></li>
+              <li><a href="Accessorie.html">Accessories</a></li>
+              <li><a href="Kids.html">Kids</a></li>
+              <li><a href="Contact us.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Information</h4>
+            <ul>
+              <li><a href="#">Terms and Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Socials</h4>
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
+
     <script src="js/cart.js"></script>
-</body>
+    <script src="Aboutscript.js"></script>
+  </body>
 </html>

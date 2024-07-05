@@ -118,6 +118,7 @@ body {
   z-index: 999;
   padding-top: 30px;
   transition: 0.5s;
+  overflow-x: hidden;
 }
 
 .sidebar ul {
@@ -157,7 +158,7 @@ body {
   padding: 10px;
 }
 
-#closeSidebar {
+/* #closeSidebar {
   display: none;
   position: fixed;
   top: 10px;
@@ -166,13 +167,23 @@ body {
   color: #818181;
   cursor: pointer;
   transition: 0.3s;
+} */
+
+/* Show the sidebar and close button when the sidebar is active */
+.sidebar.active {
+  width: 200px;
+  display: block;
+}
+
+.sidebar.active #closeSidebar {
+  display: block;
 }
 
 #closeSidebar:hover {
   color: #f1f1f1;
 }
 
-.sidebar ul li a:hover{
+.sidebar ul li a:hover {
   color: #969292;
 }
 
@@ -185,12 +196,14 @@ body {
   margin-bottom: 20px; /* Add margin spacing below the about section */
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 10px 0;
   text-align: center;
 }
 hr {
-  border: 2px solid #DA5726;
+  border: 2px solid #da5726;
   margin: 20px auto;
   width: 95%;
   height: 2px;
@@ -318,15 +331,34 @@ hr {
   flex-wrap: wrap;
 }
 
+/*Footer*/
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 15px;
+}
+
 .footer {
   background-color: #000000;
   padding: 50px 0;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 20px;
   text-align: left;
 }
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .footer-col {
   width: 25%;
   padding: 0 15px;
+  box-sizing: border-box;
 }
+
 .footer-col h4 {
   font-size: 18px;
   color: #ffffff;
@@ -335,6 +367,7 @@ hr {
   font-weight: 500;
   position: relative;
 }
+
 .footer-col h4::before {
   content: "";
   position: absolute;
@@ -345,23 +378,32 @@ hr {
   box-sizing: border-box;
   width: 50px;
 }
+
+.footer-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .footer-col ul li:not(:last-child) {
   margin-bottom: 10px;
 }
+
 .footer-col ul li a {
   font-size: 16px;
   text-transform: capitalize;
   color: #ffffff;
   text-decoration: none;
   font-weight: 300;
-  color: #fff;
   display: block;
   transition: all 0.3s ease;
 }
+
 .footer-col ul li a:hover {
   color: #da5726;
   padding-left: 8px;
 }
+
 .footer-col .social-links a {
   display: inline-block;
   height: 40px;
@@ -374,6 +416,7 @@ hr {
   color: #ffffff;
   transition: all 0.5s ease;
 }
+
 .footer-col .social-links a:hover {
   color: #24262b;
   background-color: #da5726;
@@ -445,7 +488,7 @@ hr {
     flex-direction: column;
     align-items: center; /* Center columns in the row */
   }
-  
+
   .column {
     max-width: 100%; /* Make columns take full width */
     padding: 0 10px; /* Adjust padding for smaller screens */
@@ -465,32 +508,8 @@ hr {
     margin-bottom: 30px;
   }
 }
-@media (min-width: 992px) {
-  .footer-row {
-    display: flex;
-    flex-wrap: wrap;
-  }
 
-  .footer-col {
-    flex: 1;
-    max-width: 25%;
-  }
-}
-
-/* Responsive styling for 2 columns on medium screens */
-@media (max-width: 992px) {
-  .footer-row {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .footer-col {
-    flex: 1;
-    max-width: 50%;
-  }
-}
-
-@media (max-width: 480px) {  
+@media (max-width: 480px) {
   .card {
     width: 100%; /* Make cards take full width */
     margin: 0 auto; /* Center the card */
@@ -502,48 +521,50 @@ hr {
 }
 @media (max-width: 600px) {
   .product {
-      max-width: 100%; /* Products take full width */
+    max-width: 100%; /* Products take full width */
   }
 }
 
 /* For medium devices (tablets, 600px to 768px) */
 @media (min-width: 601px) and (max-width: 768px) {
   .product {
-      max-width: 45%; /* Products take almost half width */
+    max-width: 45%; /* Products take almost half width */
   }
 }
 
 /* For large devices (laptops/desktops, 769px to 992px) */
 @media (min-width: 769px) and (max-width: 992px) {
   .product {
-      max-width: 30%; /* Products take almost one-third width */
+    max-width: 30%; /* Products take almost one-third width */
   }
 }
 
 /* For extra large devices (large laptops/desktops, 993px and up) */
 @media (min-width: 993px) {
   .product {
-      max-width: 23%; /* Products take less than one-fourth width */
+    max-width: 23%; /* Products take less than one-fourth width */
   }
 }
+
+/*More footer media queries*/
 @media (max-width: 992px) {
   .footer-col {
-      width: 50%;
-      margin-bottom: 30px;
+    width: 50%;
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 576px) {
   .footer {
-      text-align: center;
+    text-align: center;
   }
   .footer-col h4::before {
-      left: 50%;
-      transform: translateX(-50%);
+    left: 50%;
+    transform: translateX(-50%);
   }
   .footer-col ul li a:hover {
-      padding-left: 0;
+    padding-left: 0;
   }
   .footer-col .social-links a {
-      margin: 0 5px 10px 5px;
+    margin: 0 5px 10px 5px;
   }
 }

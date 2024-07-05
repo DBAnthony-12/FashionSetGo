@@ -1,13 +1,13 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 /* General header styling */
 .header {
@@ -37,7 +37,7 @@ body {
 
 .company-logo {
   margin-right: auto; /* Pushes the company logo to the left */
-  margin-left: 50px; 
+  margin-left: 50px;
 }
 
 .company-logo a {
@@ -149,21 +149,40 @@ nav {
   display: block;
 }
 
+.fa-rectangle-xmark,
 #closeSidebar {
-  display: none;
+  display: block;
   font-size: 24px;
   cursor: pointer;
   color: white;
   text-align: right;
   padding-right: 20px;
-  position: absolute;
+}
+/* #closeSidebar {
+  display: none;
+  position: fixed;
   top: 10px;
   right: 10px;
-  z-index: 1001; /* Ensure it's above other content */
+  font-size: 30px;
+  color: #818181;
+  cursor: pointer;
+  transition: 0.3s;
+} */
+#closeSidebar:hover {
+  color: #f1f1f1;
+}
+/* Show the sidebar and close button when the sidebar is active */
+.sidebar.active {
+  width: 200px;
+  display: block;
+}
+
+.sidebar.active #closeSidebar {
+  display: block;
 }
 
 #menu {
-  display: block; /* Ensure it's visible on small screens */
+  display: none; /* Ensure it's visible on small screens */
   position: fixed;
   top: 15px;
   right: 15px;
@@ -213,7 +232,7 @@ nav {
 }
 .product .butt {
   padding: 5px 10px; /* Adjust button padding */
-  background-color: #4CAF50;
+  background-color: #4caf50;
   border: none;
   color: white;
   cursor: pointer;
@@ -223,24 +242,34 @@ nav {
   background-color: #45a049;
 }
 
+/*Footer*/
+
 .container {
   max-width: 1170px;
   margin: auto;
-}
-.row {
-  display: flex;
-  flex-wrap: wrap;
+  padding: 0 15px;
 }
 
 .footer {
   background-color: #000000;
   padding: 50px 0;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 20px;
   text-align: left;
 }
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .footer-col {
   width: 25%;
   padding: 0 15px;
+  box-sizing: border-box;
 }
+
 .footer-col h4 {
   font-size: 18px;
   color: #ffffff;
@@ -249,6 +278,7 @@ nav {
   font-weight: 500;
   position: relative;
 }
+
 .footer-col h4::before {
   content: "";
   position: absolute;
@@ -259,23 +289,32 @@ nav {
   box-sizing: border-box;
   width: 50px;
 }
+
+.footer-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .footer-col ul li:not(:last-child) {
   margin-bottom: 10px;
 }
+
 .footer-col ul li a {
   font-size: 16px;
   text-transform: capitalize;
   color: #ffffff;
   text-decoration: none;
   font-weight: 300;
-  color: #fff;
   display: block;
   transition: all 0.3s ease;
 }
+
 .footer-col ul li a:hover {
   color: #da5726;
   padding-left: 8px;
 }
+
 .footer-col .social-links a {
   display: inline-block;
   height: 40px;
@@ -288,6 +327,7 @@ nav {
   color: #ffffff;
   transition: all 0.5s ease;
 }
+
 .footer-col .social-links a:hover {
   color: #24262b;
   background-color: #da5726;
@@ -295,7 +335,7 @@ nav {
 
 @media (max-width: 768px) {
   .nav-links {
-      display: none;
+    display: none;
   }
   .nav-icon1,
   .nav-icon2,
@@ -303,50 +343,50 @@ nav {
     display: none;
   }
   #menu {
-      display: block;
-      cursor: pointer;
-      font-size: 24px;
-      color: black;
-    }
-    .sidebar {
-      display: inline-block;
-      position: fixed;
-      top: 0;
-      right: 0;
-      height: 100%;
-      width: 0px;
-      background-color: #111;
-      z-index: 1000;
-      padding-top: 60px;
-      transition: width 0.5s;
-    }
-  
-    .sidebar ul {
-      list-style-type: none;
-      padding: 0;
-    }
-  
-    .sidebar ul li {
-      padding: 8px;
-      text-align: center;
-    }
-  
-    .sidebar ul li a {
-      color: white;
-      text-decoration: none;
-      display: block;
-      font-size: 18px;
-    }
-  
-    .fa-rectangle-xmark,
-    #closeSidebar {
-      display: block;
-      position: relative;
-      font-size: 30px;
-      cursor: pointer;
-      color: white;
-      text-align: right;
-      padding-right: 20px;
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    color: black;
+  }
+  .sidebar {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0px;
+    background-color: #111;
+    z-index: 1000;
+    padding-top: 60px;
+    transition: width 0.5s;
+  }
+
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .sidebar ul li {
+    padding: 8px;
+    text-align: center;
+  }
+
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+  }
+
+  .fa-rectangle-xmark,
+  #closeSidebar {
+    display: block;
+    position: relative;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    text-align: right;
+    padding-right: 20px;
   }
   .footer-col {
     width: 100%;
@@ -356,124 +396,94 @@ nav {
 }
 @media (max-width: 600px) {
   .product {
-      max-width: 100%; /* Products take full width */
+    max-width: 100%; /* Products take full width */
   }
 }
 
 /* For medium devices (tablets, 600px to 768px) */
 @media (min-width: 601px) and (max-width: 768px) {
   .product {
-      max-width: 45%; /* Products take almost half width */
+    max-width: 45%; /* Products take almost half width */
   }
 }
 
 /* For large devices (laptops/desktops, 769px to 992px) */
 @media (min-width: 769px) and (max-width: 992px) {
   .product {
-      max-width: 30%; /* Products take almost one-third width */
+    max-width: 30%; /* Products take almost one-third width */
   }
 }
 
 /* For extra large devices (large laptops/desktops, 993px and up) */
 @media (min-width: 993px) {
   .product {
-      max-width: 23%; /* Products take less than one-fourth width */
+    max-width: 23%; /* Products take less than one-fourth width */
   }
 }
 @media (max-width: 992px) {
   .footer-col {
-      width: 50%;
-      margin-bottom: 30px;
+    width: 50%;
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 576px) {
   .footer {
-      text-align: center;
+    text-align: center;
   }
   .footer-col h4::before {
-      left: 50%;
-      transform: translateX(-50%);
+    left: 50%;
+    transform: translateX(-50%);
   }
   .footer-col ul li a:hover {
-      padding-left: 0;
+    padding-left: 0;
   }
   .footer-col .social-links a {
-      margin: 0 5px 10px 5px;
+    margin: 0 5px 10px 5px;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- /* Add modal styles here */
- .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+/* Add modal styles here */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
 }
 
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .butt {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #f44336;
-  }
-  
-  .butt:hover {
-    background-color: #f44336;
-    color: white;
-  }
+  background-color: white;
+  color: black;
+  border: 2px solid #f44336;
+}
+
+.butt:hover {
+  background-color: #f44336;
+  color: white;
+}
