@@ -333,6 +333,78 @@ nav {
   background-color: #da5726;
 }
 
+/* Hide popup form initially */
+.popup-form {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(270deg, #e4a952 10%, #a2e46b 100%);
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Form styling */
+.popup-form form {
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+}
+
+.popup-form h2 {
+  text-align: center;
+}
+
+.popup-form input[type="text"],
+.popup-form input[type="email"],
+.popup-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.popup-form .container {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.popup-form .container p {
+  margin: 0;
+}
+.formBtn {
+  background-color: orange;
+  color: white;
+  border: 2px solid white;
+  padding: 15px 30px; /* Increase padding for bigger size */
+  font-size: 18px; /* Increase font size */
+  cursor: pointer;
+  border-radius: 40px;
+  transition: 0.5s;
+}
+
+.formBtn a{
+  text-decoration: none;
+  color: inherit;
+}
+
+ /* Hover effect */
+  .formBtn:hover {
+    transform: scale(1.05);
+  }
+/* Show popup form when active */
+.popup-active {
+  display: block;
+}
+
+
+/*Media queries*/
 @media (max-width: 768px) {
   .nav-links {
     display: none;
