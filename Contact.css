@@ -224,10 +224,10 @@ hr {
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
-  background-color: rgb(206, 201, 201);
+  background: linear-gradient(90.21deg, #d8d8d8 -5.91%, #979799 111.58%);
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgb(255, 188, 87);
 }
 
 .form-container form {
@@ -245,6 +245,18 @@ hr {
   margin-bottom: 15px;
   box-sizing: border-box;
 }
+.form textarea {
+  width: 100%; /* Make the textarea width match the input fields */
+  height: 120px;
+  padding: 10px; /* Add padding inside the textarea */
+  margin-bottom: 15px; /* Space below the textarea */
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Slightly rounded corners */
+  resize: vertical; /* Allow vertical resizing, but prevent horizontal resizing */
+  font-size: 16px; /* Font size */
+  font-family: Arial, sans-serif; /* Font family */
+}
 
 .form button {
   background-color: #da5726;
@@ -253,10 +265,12 @@ hr {
   border: none;
   cursor: pointer;
   width: 80%;
+  border-radius: 40px;
+  font-size: 18px;
 }
 
 .form button:hover {
-  background-color: #bf4e21;
+  background-color: #abb4b4;
 }
 
 /*contact list of place*/
@@ -285,6 +299,7 @@ hr {
   height: 300px;
   border: 0;
   margin-top: 20px;
+  box-shadow: 0 0 20px rgb(87, 86, 86);
 }
 
 /*Footer*/
@@ -467,6 +482,7 @@ hr {
   .responsive-map {
     height: 200px; /* Smaller height for smaller tablets */
     width: 70%;
+    box-shadow: 0 0 20px rgb(87, 86, 86);
   }
 }
 
@@ -523,6 +539,7 @@ hr {
   .responsive-map {
     height: 150px; /* Smallest height for mobile phones */
     width: 90%;
+    box-shadow: 0 0 20px rgb(87, 86, 86);
   }
 }
 

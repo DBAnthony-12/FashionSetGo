@@ -198,9 +198,10 @@ h1,
 h2 {
   text-align: center;
 }
+
 .slideshow-container {
   max-width: 95%; /* Adjust the width as needed */
-  max-height: 400px; /* Set a specific height */
+  max-height: 500px; /* Set a specific height */
   position: relative;
   margin: auto;
   overflow: hidden;
@@ -209,6 +210,14 @@ h2 {
 /* Hide the images by default */
 .mySlides {
   display: none;
+}
+
+/* Ensure the images fit within the container */
+.mySlides img {
+  width: 90%; /* Ensure images take the full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 100%; /* Ensure images do not exceed container height */
+  object-fit: cover; /* Cover the container without distortion */
 }
 
 /* Fading animation */
@@ -228,9 +237,8 @@ h2 {
 
 /* Caption text */
 .text {
-  color: white;
-  /* color: orange; */
-  font-size: 35px;
+  color: orange;
+  font-size: 35px; /* Adjusted font size for smaller images */
   padding: 8px 12px;
   position: absolute;
   top: 50px;
@@ -277,6 +285,7 @@ h2 {
 #getStarted:hover {
   background-color: #ff4500;
 }
+
 /* Slideshow container ends */
 
 /* Featured Products Section */
@@ -391,14 +400,14 @@ h3 {
   bottom: 20px;
   right: 20px;
   z-index: 99;
-  font-size: 18px;
+  font-size: 25px;
   border: none;
   outline: none;
-  background-color: #333; /* Dark background color for button */
+  background-color: orange; /* Dark background color for button */
   color: white; /* White text color */
   cursor: pointer;
   padding: 15px;
-  border-radius: 50%; /* Circular button */
+  border-radius: 15%; /* Circular button */
   transition: background-color 0.3s ease;
 }
 
