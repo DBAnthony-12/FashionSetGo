@@ -485,6 +485,9 @@ hr {
   .nav-icon3 {
     display: none;
   }
+  .nav-icon1{
+    cursor: pointer;;
+  }
   #menu {
     display: block;
     cursor: pointer;
